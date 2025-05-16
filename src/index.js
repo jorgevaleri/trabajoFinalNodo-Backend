@@ -41,6 +41,15 @@ app.use(
 await connectDB()
 
 // MONTA LAS DIFERENTES RUTAS BAJO LOS PREFIJOS CORRESPONDIENTES
+
+/***********************************/
+/*NUEVO*/
+app.get('/', (req, res) => {
+  res.send('Bienvenido a la API de películas');
+});
+/***********************************/
+
+
 app.use('/api/auth', authRoutes) // RUTAS DE AUTENTICACIÓN
 app.use('/api/users', userRoutes) // RUTAS DE USUARIOS
 app.use('/api/profiles', profileRoutes) // RUTAS DE PERFILES
